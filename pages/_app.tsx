@@ -1,5 +1,3 @@
-import '../styles/globals.css'
-
 import { AppProps } from 'next/app'
 import React, { ReactNode } from 'react'
 

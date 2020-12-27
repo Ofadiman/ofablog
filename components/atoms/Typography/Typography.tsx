@@ -1,7 +1,8 @@
 import React from 'react'
 
+import { StyledTypography } from './Typography.styles'
 import { TypographyProps } from './Typography.types'
 
 export const Typography: FC<TypographyProps> = ({ className }) => {
-  return <div className={className}>{'renders Typography'}</div>
+  return <StyledTypography className={className}>{'renders Typography'}</StyledTypography>
 }

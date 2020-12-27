@@ -30,18 +30,19 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'better-styled-components',
     'import',
     'jest',
+    'jest-dom',
     'prettier',
     'promise',
-    'simple-import-sort',
-    'sort-keys-fix',
-    'typescript-sort-keys',
-    'unicorn',
-    'jest-dom',
     'react',
     'react-hooks',
-    'testing-library'
+    'simple-import-sort',
+    'sort-keys-fix',
+    'testing-library',
+    'typescript-sort-keys',
+    'unicorn'
   ],
   rules: {
     // eslint
@@ -779,7 +780,10 @@ module.exports = {
     'testing-library/prefer-find-by': 'error',
     'testing-library/prefer-presence-queries': 'error',
     'testing-library/prefer-screen-queries': 'error',
-    'testing-library/prefer-wait-for': 'error'
+    'testing-library/prefer-wait-for': 'error',
+
+    // eslint-plugin-better-styled-components
+    'better-styled-components/sort-declarations-alphabetically': 'error'
   },
   overrides: [
     {
