@@ -799,6 +799,12 @@ module.exports = {
       }
     },
     {
+      files: ['./**/*.stories.tsx'],
+      rules: {
+        'import/no-default-export': 'off'
+      }
+    },
+    {
       files: '*.js',
       rules: {
         '@typescript-eslint/adjacent-overload-signatures': 'off',

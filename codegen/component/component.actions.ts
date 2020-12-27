@@ -17,5 +17,10 @@ export const componentActions: ActionType[] = [
     path: `components/${componentConst.plop.type}/${componentConst.plop.name}/${componentConst.plop.name}.styles.scss`,
     template: require('./templates/component.styles.template').template,
     type: 'add'
+  },
+  {
+    path: `components/${componentConst.plop.type}/${componentConst.plop.name}/${componentConst.plop.name}.stories.tsx`,
+    template: require('./templates/component.stories.template').template,
+    type: 'add'
   }
 ]

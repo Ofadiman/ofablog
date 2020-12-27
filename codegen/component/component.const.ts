@@ -1,4 +1,4 @@
-import { createPlopVar } from '@ofadiman/plop'
+import { createPlopVar, PlopHelpers } from '@ofadiman/plop'
 
 const variables = {
   name: 'name',
@@ -8,6 +8,7 @@ const variables = {
 
 const plop = {
   name: createPlopVar(variables.name),
+  pascalCaseType: `${createPlopVar(variables.type, [PlopHelpers.PascalCase])}s`,
   type: `${createPlopVar(variables.type)}s`
 }
 
