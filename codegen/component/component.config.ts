@@ -1,41 +1,23 @@
-import { composeValidators, PlopExitCodes, PlopGeneratorConfig, requireInput, requirePascalCase } from '@ofadiman/plop'
-import chalk from 'chalk'
-import { Answers } from 'inquirer'
+import { composeValidators, PlopGeneratorConfig } from '@ofadiman/plop'
 
+import { readDirs } from '../readDirs'
 import { componentActions } from './component.actions'
 import { componentConst } from './component.const'
 
 export const componentConfig: PlopGeneratorConfig = {
-  actions: (answers) => {
-    if (!answers || !answers[componentConst.variables.shouldGenerateCode]) {
-      process.exit(PlopExitCodes.CancelCodegen)
-    }
-
-    return componentActions
-  },
-  description: 'Generate a/an component.',
+  actions: componentActions,
+  description: 'Generate a component.',
   prompts: [
     {
-      message: 'Choose a name for component:',
+      message: 'Component name:',
       name: componentConst.variables.name,
       type: 'input',
-      validate: composeValidators(requireInput('Name is required!'), requirePascalCase('Name must be in pascal case!'))
+      validate: composeValidators()
     },
     {
-      choices: ['atom', 'molecule', 'organism', 'template'],
+      choices: readDirs('components'),
       message: 'What type of component do you want to generate?',
       name: componentConst.variables.type,
-      type: 'list'
-    },
-    {
-      choices: [
-        { name: 'Yes', value: true },
-        { name: 'No', value: false }
-      ],
-      message: (answers: Answers): string => {
-        return `Do you want to generate ${chalk.green(answers[componentConst.variables.name])} component?`
-      },
-      name: componentConst.variables.shouldGenerateCode,
       type: 'list'
     }
   ]

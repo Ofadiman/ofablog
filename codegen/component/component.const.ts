@@ -1,19 +1,14 @@
-import { createPlopVar, PlopHelpers } from '@ofadiman/plop'
+import { createPlopVariables } from '@ofadiman/plop'
 
 const variables = {
   name: 'name',
-  shouldGenerateCode: 'shouldGenerateCode',
   type: 'type'
-}
+} as const
 
-const plop = {
-  name: createPlopVar(variables.name),
-  pascalCaseType: `${createPlopVar(variables.type, [PlopHelpers.PascalCase])}s`,
-  type: `${createPlopVar(variables.type)}s`
-}
+const plop = createPlopVariables(variables)
 
 export const componentConst = {
-  generator: 'Component',
+  generatorName: 'component',
   plop,
   variables
 }
