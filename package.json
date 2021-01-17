@@ -20,6 +20,9 @@
     "syncpack-format": "syncpack format"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.5",
+    "gray-matter": "^4.0.2",
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -29,7 +32,7 @@
     "@babel/core": "^7.12.10",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
-    "@ofadiman/eslint-config-base": "^0.1.5",
+    "@ofadiman/eslint-config-base": "^0.1.6",
     "@ofadiman/eslint-config-react": "0.1.2",
     "@ofadiman/plop": "0.1.8",
     "@prettier/plugin-xml": "0.12.0",
