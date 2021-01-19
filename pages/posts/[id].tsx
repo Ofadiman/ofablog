@@ -1,7 +1,10 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
 import { ParsedUrlQuery } from 'querystring'
 import { ReactNode } from 'react'
 
+import { Date } from '../../components/atoms/Date/Date'
 import { getAllPostIds, getPostData, PostData } from '../../lib/posts'
 
 type GetStaticPropsProps = {
@@ -36,14 +39,20 @@ export const getStaticProps: GetStaticProps<GetStaticPropsProps, GetStaticPropsP
 }
 
 export default function PostPage(props: InferGetStaticPropsType<typeof getStaticProps>): ReactNode {
-  const {
-    postData: { contentHtml }
-  } = props
+  const { postData } = props
+  const { contentHtml, title, date } = postData
 
   return (
-    <div>
-      <pre>{JSON.stringify(props, null, 2)}</pre>
-      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div>
+        <pre>{JSON.stringify(props, null, 2)}</pre>
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <Date dateString={date} />
+        <Link href={'/'}>{'back to home'}</Link>
+      </div>
+    </>
   )
 }
