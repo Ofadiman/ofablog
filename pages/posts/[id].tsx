@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps<GetStaticPropsProps, GetStaticPropsP
     throw new Error('"params" is undefined!')
   }
 
-  const postData = getPostData(params.id)
+  const postData = await getPostData(params.id)
 
   return {
     props: {
@@ -36,9 +36,14 @@ export const getStaticProps: GetStaticProps<GetStaticPropsProps, GetStaticPropsP
 }
 
 export default function PostPage(props: InferGetStaticPropsType<typeof getStaticProps>): ReactNode {
+  const {
+    postData: { contentHtml }
+  } = props
+
   return (
     <div>
       <pre>{JSON.stringify(props, null, 2)}</pre>
+      <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
     </div>
   )
 }
