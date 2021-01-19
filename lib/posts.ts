@@ -10,6 +10,12 @@ type FrontmatterContent = {
   title: string
 }
 
+type PostParamData = {
+  params: {
+    id: string
+  }
+}
+
 export type PostData = FrontmatterContent & { id: string }
 
 export const getSortedPostsData = (): PostData[] => {
@@ -35,4 +41,28 @@ export const getSortedPostsData = (): PostData[] => {
 
     return -1
   })
+}
+
+export const getAllPostIds = (): PostParamData[] => {
+  const fileNames = readdirSync(POSTS_DIRECTORY)
+
+  return fileNames.map((fileName) => {
+    return {
+      params: {
+        id: fileName.replace(MARKDOWN_FILE_REGEX, '')
+      }
+    }
+  })
+}
+
+export const getPostData = (id: string): PostData => {
+  const fullPath = path.join(POSTS_DIRECTORY, `${id}.md`)
+  const fileContents = readFileSync(fullPath, 'utf8')
+
+  const matterResult = matter(fileContents)
+
+  return {
+    id,
+    ...matterResult.data
+  } as PostData
 }

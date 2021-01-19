@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
 import { Home } from '../components/templates/Home/Home'
@@ -28,7 +29,7 @@ export default function HomePage({ allPostsData }: { allPostsData: PostData[] })
           <ul>
             {allPostsData.map(({ id, date, title }) => (
               <li key={id}>
-                {title}
+                <Link href={`posts/${id}`}>{title}</Link>
                 <br />
                 {id}
                 <br />
