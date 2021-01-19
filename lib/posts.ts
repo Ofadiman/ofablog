@@ -1,34 +1,23 @@
 import { readdirSync, readFileSync } from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
-import remark from 'remark'
-import html from 'remark-html'
 
-import { POSTS_DIRECTORY } from '../const/directories.const'
-import { MARKDOWN_FILE_REGEX } from '../const/regularExpressions.const'
-
-type FrontmatterContent = {
-  date: string
-  title: string
-}
-
-type PostParamData = {
-  params: {
-    id: string
-  }
-}
-
-export type PostData = FrontmatterContent & { contentHtml: string; id: string }
+import { POSTS_DIRECTORY } from './const/directories'
+import { MDX_FILE_EXTENSION_REGEX } from './const/regularExpressions'
+import { transformMdx } from './functions/transformMdx/transformMdx'
+import { Frontmatter } from './types/Frontmatter.type'
+import { PostData } from './types/PostData.type'
+import { PostParamData } from './types/PostParamData.type'
 
 export const getSortedPostsData = (): PostData[] => {
   const fileNames = readdirSync(POSTS_DIRECTORY)
   const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(MARKDOWN_FILE_REGEX, '')
+    const id = fileName.replace(MDX_FILE_EXTENSION_REGEX, '')
 
     const fullPath = path.join(POSTS_DIRECTORY, fileName)
-    const fileContents = readFileSync(fullPath, 'utf8')
+    const fileContent = readFileSync(fullPath, 'utf8')
 
-    const postMetadata = matter(fileContents)
+    const postMetadata = matter(fileContent)
 
     return {
       id,
@@ -51,24 +40,23 @@ export const getAllPostIds = (): PostParamData[] => {
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(MARKDOWN_FILE_REGEX, '')
+        id: fileName.replace(MDX_FILE_EXTENSION_REGEX, '')
       }
     }
   })
 }
 
 export const getPostData = async (id: string): Promise<PostData> => {
-  const fullPath = path.join(POSTS_DIRECTORY, `${id}.md`)
+  const fullPath = path.join(POSTS_DIRECTORY, `${id}.mdx`)
   const fileContents = readFileSync(fullPath, 'utf8')
 
-  const matterResult = matter(fileContents)
+  const { data, content } = matter(fileContents)
 
-  const processedContent = await remark().use(html).process(matterResult.content)
-  const contentHtml = processedContent.toString()
+  const transformedMdx = (await transformMdx(content, data as Frontmatter)) as string
 
   return {
-    contentHtml,
     id,
-    ...matterResult.data
+    ...data,
+    transformedMdx
   } as PostData
 }
