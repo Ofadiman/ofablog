@@ -4,6 +4,7 @@ module.exports = {
     {
       files: ['pages/**/*.{ts,tsx}'],
       rules: {
+        '@typescript-eslint/no-non-null-assertion': 'off',
         'import/no-default-export': 'off'
       }
     },

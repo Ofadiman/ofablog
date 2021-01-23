@@ -4,7 +4,8 @@ import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
 import { Home } from '../components/templates/Home/Home'
-import { getSortedPostsData, PostData } from '../lib/posts'
+import { getSortedPostsData } from '../lib/posts'
+import { PostData } from '../lib/types/PostData.type'
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData()
