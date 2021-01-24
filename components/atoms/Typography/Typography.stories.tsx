@@ -11,4 +11,6 @@ export default {
 const Template: Story<TypographyProps> = (args) => <Typography {...args} />
 
 export const Main = Template.bind({})
-Main.args = {}
+Main.args = {
+  children: 'basic typography'
+}
