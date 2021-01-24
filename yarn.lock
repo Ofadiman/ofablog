@@ -1563,10 +1563,10 @@
     puka "^1.0.1"
     read-package-json-fast "^1.1.3"
 
-"@ofadiman/eslint-config-base@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@ofadiman/eslint-config-base/-/eslint-config-base-0.1.6.tgz#edc213e11eb5269e9c99e4c3a4f45b303de23b12"
-  integrity sha512-6AdfnxPLZs/aEtZaeomQtLfgCf73xh+Cg19On+7Z8o02wjdvSpJC5RxSYYUMB73Ksc2JAOHOLIyAGdJKtfvMGA==
+"@ofadiman/eslint-config-base@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@ofadiman/eslint-config-base/-/eslint-config-base-0.1.7.tgz#045bb7efd363663d2f814ecafe09377045a922d7"
+  integrity sha512-JLnvyGFTNaXEIrZMc0ncwI6aCP9YIgpgaL0aPjVQhR3Vp163/7Pvk17grurSJBK3qJx/ZQdeC4lEsDiRdjGGZA==
 
 "@ofadiman/eslint-config-react@0.1.2":
   version "0.1.2"
@@ -1580,6 +1580,11 @@
   dependencies:
     lodash "^4.17.20"
     pluralize "^8.0.0"
+
+"@ofadiman/shared@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@ofadiman/shared/-/shared-0.1.9.tgz#5cbd9226d23cbf162f6a1f7643a2ffdbea0ee560"
+  integrity sha512-ob6jmGDDlETWzezRPxFJ6FADKD9x8U24GsqPtRvH2Wja5x/dYnalDh54IbQXf+IufmGXsKucf4neI8m6gUg7vg==
 
 "@opentelemetry/api@0.14.0":
   version "0.14.0"
