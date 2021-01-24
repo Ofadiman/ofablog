@@ -9,14 +9,14 @@
   "description": "Personal blog.",
   "license": "MIT",
   "scripts": {
-    "build": "next build",
-    "build-storybook": "build-storybook",
-    "dev": "next dev",
     "eslint-check": "eslint {codegen,pages,components}/**/*.{ts,tsx}",
     "eslint-fix": "eslint {codegen,pages,components}/**/*.{ts,tsx} --fix",
+    "next-build": "next build",
+    "next-dev": "next dev",
+    "next-start": "next start",
     "npm-update-minor": "ncu -u --target minor",
-    "start": "next start",
-    "storybook": "start-storybook -p 6006",
+    "storybook-build": "build-storybook -o storybook",
+    "storybook-dev": "start-storybook -p 6006",
     "syncpack-format": "syncpack format"
   },
   "dependencies": {
