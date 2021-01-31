@@ -5,7 +5,6 @@ import hydrate from 'next-mdx-remote/hydrate'
 import { ParsedUrlQuery } from 'querystring'
 import { ReactNode } from 'react'
 
-import { Date } from '../../components/atoms/Date/Date'
 import { MDX_COMPONENTS } from '../../lib/const/mdxComponents'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { PostData } from '../../lib/types/PostData.type'
@@ -43,7 +42,7 @@ export const getStaticProps: GetStaticProps<GetStaticPropsProps, GetStaticPropsP
 
 export default function PostPage(props: InferGetStaticPropsType<typeof getStaticProps>): ReactNode {
   const { postData } = props
-  const { transformedMdx, title, date } = postData
+  const { transformedMdx, title } = postData
   const content = hydrate(transformedMdx, { components: MDX_COMPONENTS })
 
   return (
@@ -54,7 +53,6 @@ export default function PostPage(props: InferGetStaticPropsType<typeof getStatic
       <div>
         <pre>{JSON.stringify(props, null, 2)}</pre>
         <div>{content}</div>
-        <Date dateString={date} />
         <Link href={'/'}>{'back to home'}</Link>
       </div>
     </>
