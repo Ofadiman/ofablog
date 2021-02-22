@@ -4,7 +4,7 @@ import { mediaQueries } from '../constants/mediaQueries'
 import { typography } from '../constants/typography'
 import { zIndex } from '../constants/zIndex'
 
-export const lightTheme: DefaultTheme = {
+export const darkTheme: DefaultTheme = {
   mediaQueries,
   palette: {
     background: '#ffffff',

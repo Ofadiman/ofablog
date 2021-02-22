@@ -5,6 +5,15 @@ import { Typography } from './Typography'
 import { TypographyProps } from './Typography.types'
 
 export default {
+  argTypes: {
+    variant: {
+      control: {
+        options: ['button', 'caption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle'],
+        type: 'inline-radio'
+      },
+      defaultValue: 'h1'
+    }
+  },
   title: 'Components/Atoms/Typography'
 } as Meta
 

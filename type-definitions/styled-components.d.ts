@@ -16,37 +16,42 @@ declare module 'styled-components' {
     palette: {
       background: string
       error: {
+        contrastText: string
         dark: string
         light: string
         main: string
       }
       info: {
+        contrastText: string
         dark: string
         light: string
         main: string
       }
       primary: {
+        contrastText: string
         dark: string
         light: string
         main: string
       }
       secondary: {
+        contrastText: string
         dark: string
         light: string
         main: string
       }
       success: {
+        contrastText: string
         dark: string
         light: string
         main: string
       }
       typography: {
         dark: string
-        disabled: string
         light: string
         main: string
       }
       warning: {
+        contrastText: string
         dark: string
         light: string
         main: string
@@ -54,12 +59,16 @@ declare module 'styled-components' {
     }
     typography: {
       body: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
+      button: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
+      caption: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       h1: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       h2: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       h3: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       h4: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       h5: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       h6: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
+      paragraph: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
+      subtitle: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
     }
     zIndex: {
       drawer: number
