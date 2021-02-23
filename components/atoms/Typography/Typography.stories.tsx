@@ -8,7 +8,7 @@ export default {
   argTypes: {
     variant: {
       control: {
-        options: ['button', 'caption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle'],
+        options: ['button', 'caption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle', 'paragraph'],
         type: 'inline-radio'
       },
       defaultValue: 'h1'

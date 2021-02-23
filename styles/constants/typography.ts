@@ -39,7 +39,7 @@ export const typography: DefaultTheme['typography'] = {
   `,
   paragraph: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   `,
   subtitle: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
