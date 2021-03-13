@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
-import { StyledRippleEffectProps } from './RippleEffect.types'
+import { StyledVisualRippleEffectProps } from './RippleEffect.types'
 
-export const StyledRippleEffect = styled.span<StyledRippleEffectProps>`
+export const VisualRippleEffect = styled.span<StyledVisualRippleEffectProps>`
   ${({ color, millisecondsDuration, size, offsetLeft, offsetTop }) => css`
     animation-duration: ${millisecondsDuration}ms;
     animation-name: ripple;
@@ -25,7 +25,7 @@ export const StyledRippleEffect = styled.span<StyledRippleEffectProps>`
   `}
 `
 
-export const StyledRippleEffectContainer = styled.div`
+export const RippleEffectWrapper = styled.div`
   bottom: 0;
   left: 0;
   position: absolute;

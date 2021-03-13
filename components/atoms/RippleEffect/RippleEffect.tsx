@@ -1,7 +1,7 @@
 import React, { MouseEvent, useCallback, useLayoutEffect, useRef, useState, VFC } from 'react'
 
 import { RIPPLE_EFFECT_CONST } from './RippleEffect.const'
-import { StyledRippleEffect, StyledRippleEffectContainer } from './RippleEffect.styles'
+import * as S from './RippleEffect.styles'
 import { RippleEffectConfig, RippleEffectProps } from './RippleEffect.types'
 
 export const RippleEffect: VFC<RippleEffectProps> = ({
@@ -37,10 +37,10 @@ export const RippleEffect: VFC<RippleEffectProps> = ({
   }, [])
 
   return (
-    <StyledRippleEffectContainer className={className} onClick={handleRippleCreate}>
+    <S.RippleEffectWrapper className={className} onClick={handleRippleCreate}>
       {rippleArray.length > 0 &&
         rippleArray.map(({ id, size, offsetLeft, offsetTop }) => (
-          <StyledRippleEffect
+          <S.VisualRippleEffect
             color={color}
             key={id}
             millisecondsDuration={millisecondsDuration}
@@ -49,6 +49,6 @@ export const RippleEffect: VFC<RippleEffectProps> = ({
             size={size}
           />
         ))}
-    </StyledRippleEffectContainer>
+    </S.RippleEffectWrapper>
   )
 }

@@ -11,5 +11,5 @@ export type RippleEffectConfig = {
   size: number
 }
 
-export type StyledRippleEffectProps = Pick<RippleEffectConfig, 'offsetLeft' | 'offsetTop' | 'size'> &
+export type StyledVisualRippleEffectProps = Pick<RippleEffectConfig, 'offsetLeft' | 'offsetTop' | 'size'> &
   Pick<RippleEffectProps, 'color' | 'millisecondsDuration'> & {}
