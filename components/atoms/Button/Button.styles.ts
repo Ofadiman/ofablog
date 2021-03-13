@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components'
 
-export const StyledTextWrapper = styled.span`
+export const TextWrapper = styled.span`
   padding: 0 0.5rem;
 `
 
-export const StyledIconWrapper = styled.span`
+export const IconWrapper = styled.span`
   height: 2rem;
   margin: 0 0.5rem;
   width: 2rem;
 `
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
   ${({ theme }) => css`
     ${theme.typography.button};
     background-color: ${theme.palette.primary.main};

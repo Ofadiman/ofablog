@@ -4,6 +4,6 @@ export type ButtonProps = {
   children: ReactNode
   className?: string
   leftIcon?: JSX.Element
-  onClick: () => void
+  onPress: () => void
   rightIcon?: JSX.Element
 }

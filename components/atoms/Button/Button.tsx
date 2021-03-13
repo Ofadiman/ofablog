@@ -1,22 +1,21 @@
-import React, { VFC } from 'react'
+import { ButtonAria, useButton } from '@react-aria/button'
+import React, { HTMLAttributes, useRef, VFC } from 'react'
 
 import { RippleEffect } from '../RippleEffect/RippleEffect'
-import { StyledButton, StyledIconWrapper, StyledTextWrapper } from './Button.styles'
+import * as S from './Button.styles'
 import { ButtonProps } from './Button.types'
 
-export const Button: VFC<ButtonProps> = ({
-  className,
-  children,
-  leftIcon: LeftIcon,
-  rightIcon: RightIcon,
-  onClick
-}) => {
+export const Button: VFC<ButtonProps> = (props) => {
+  const { className, children, leftIcon: LeftIcon, rightIcon: RightIcon } = props
+  const buttonRef = useRef<HTMLButtonElement | null>(null)
+  const { buttonProps } = useButton(props, buttonRef) as ButtonAria<HTMLAttributes<HTMLButtonElement>>
+
   return (
-    <StyledButton className={className} onClick={onClick}>
-      {LeftIcon && <StyledIconWrapper>{LeftIcon}</StyledIconWrapper>}
-      <StyledTextWrapper>{children}</StyledTextWrapper>
-      {RightIcon && <StyledIconWrapper>{RightIcon}</StyledIconWrapper>}
+    <S.Button ref={buttonRef} {...buttonProps} className={className}>
+      {LeftIcon && <S.IconWrapper>{LeftIcon}</S.IconWrapper>}
+      <S.TextWrapper>{children}</S.TextWrapper>
+      {RightIcon && <S.IconWrapper>{RightIcon}</S.IconWrapper>}
       <RippleEffect />
-    </StyledButton>
+    </S.Button>
   )
 }

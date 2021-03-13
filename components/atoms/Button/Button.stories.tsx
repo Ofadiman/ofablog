@@ -32,6 +32,10 @@ Main.args = {
 export const WithIcons = Template.bind({})
 WithIcons.args = {
   children: 'click me',
+  className: 'clsx',
   leftIcon: <ReactSvg />,
+  onPress: () => {
+    console.info('onPress')
+  },
   rightIcon: <ArrowSvg />
 }
