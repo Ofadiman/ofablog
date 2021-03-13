@@ -23,8 +23,10 @@ export const darkTheme: DefaultTheme = {
     primary: {
       contrastText: '#ffffff',
       dark: '#2d0042',
+      hover: '#2E0044',
       light: '#9b47c2',
-      main: '#2d0042'
+      main: '#7901B1',
+      outline: '#b17ccd'
     },
     secondary: {
       contrastText: '#ffffff',

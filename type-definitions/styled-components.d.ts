@@ -30,8 +30,10 @@ declare module 'styled-components' {
       primary: {
         contrastText: string
         dark: string
+        hover: string
         light: string
         main: string
+        outline: string
       }
       secondary: {
         contrastText: string
