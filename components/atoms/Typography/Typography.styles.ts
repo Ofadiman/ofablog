@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import { StyledTypographyProps } from './Typography.types'
 
-export const StyledTypography = styled.p<StyledTypographyProps>`
+export const Typography = styled.p<StyledTypographyProps>`
   ${({ theme, variant }) => css`
     ${(() => {
       switch (variant) {
