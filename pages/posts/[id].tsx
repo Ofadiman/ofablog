@@ -5,6 +5,7 @@ import hydrate from 'next-mdx-remote/hydrate'
 import { ParsedUrlQuery } from 'querystring'
 import { ReactNode } from 'react'
 
+import { Typography } from '../../components/atoms/Typography/Typography'
 import { MDX_COMPONENTS } from '../../lib/const/mdxComponents'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import { PostData } from '../../lib/types/PostData.type'
@@ -50,11 +51,15 @@ export default function PostPage(props: InferGetStaticPropsType<typeof getStatic
       <Head>
         <title>{title}</title>
       </Head>
-      <div>
-        <pre>{JSON.stringify(props, null, 2)}</pre>
-        <div>{content}</div>
-        <Link href={'/'}>{'back to home'}</Link>
-      </div>
+      <main>
+        <article>
+          <Typography as={'h2'} variant={'h4'}>
+            {title}
+          </Typography>
+          {content}
+          <Link href={'/'}>{'back to home'}</Link>
+        </article>
+      </main>
     </>
   )
 }
