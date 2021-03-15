@@ -1,4 +1,4 @@
 export const RIPPLE_EFFECT_CONST = {
-  DEFAULT_COLOR: 'hsl(0, 100%, 100%)',
+  DEFAULT_COLOR: 'hsl(0, 0%, 75%)',
   DEFAULT_RIPPLE_DURATION: 800
 }

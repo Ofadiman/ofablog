@@ -11,19 +11,19 @@ export const typography: DefaultTheme['typography'] = {
   `,
   caption: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   `,
   h1: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
-    font-size: 6.4rem;
+    font-size: 3.3rem;
   `,
   h2: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
-    font-size: 4.8rem;
+    font-size: 3rem;
   `,
   h3: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
-    font-size: 3.6rem;
+    font-size: 2.7rem;
   `,
   h4: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
@@ -43,6 +43,6 @@ export const typography: DefaultTheme['typography'] = {
   `,
   subtitle: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   `
 }
