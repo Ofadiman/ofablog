@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next'
-import Head from 'next/head'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
@@ -19,27 +18,21 @@ export const getStaticProps: GetStaticProps = async () => {
 
 export default function HomePage({ allPostsData }: { allPostsData: PostData[] }): ReactNode {
   return (
-    <>
-      <Head>
-        <title>{'Ofablog'}</title>
-        <link href={'/favicon.ico'} rel={'icon'} />
-      </Head>
-      <Home Footer={() => <footer>{'footer'}</footer>} Header={() => <header>{'header'}</header>}>
-        <section>
-          <h2>{'Blog'}</h2>
-          <ul>
-            {allPostsData.map(({ id, date, title }) => (
-              <li key={id}>
-                <Link href={`/posts/${id}`}>{title}</Link>
-                <br />
-                {id}
-                <br />
-                {date}
-              </li>
-            ))}
-          </ul>
-        </section>
-      </Home>
-    </>
+    <Home Footer={() => <footer>{'footer'}</footer>} Header={() => <header>{'header'}</header>}>
+      <section>
+        <h2>{'Blog'}</h2>
+        <ul>
+          {allPostsData.map(({ id, date, title }) => (
+            <li key={id}>
+              <Link href={`/posts/${id}`}>{title}</Link>
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </Home>
   )
 }
