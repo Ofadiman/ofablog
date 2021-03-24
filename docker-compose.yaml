@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  blog:
+    container_name: blog
+    image: blog:1.0.0
+    build:
+      context: ./
+      dockerfile: dev.Dockerfile
+      args:
+        - uid=$UID
+        - gid=$GID
+        - user=$USER
+    volumes:
+      - .:/ofablog
+    ports:
+      - 3000:3000
+    working_dir: /ofablog
+    command: yarn next-dev
+
+  storybook:
+    container_name: storybook
+    image: storybook:1.0.0
+    build:
+      context: ./
+      dockerfile: dev.Dockerfile
+      args:
+        - uid=$UID
+        - gid=$GID
+        - user=$USER
+    volumes:
+      - .:/ofablog
+    ports:
+      - 6006:6006
+    working_dir: /ofablog
+    command: yarn storybook-dev
