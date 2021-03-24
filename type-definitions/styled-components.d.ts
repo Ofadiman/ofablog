@@ -13,7 +13,9 @@ declare module 'styled-components' {
         tablet: string
       }
     }
+    name: string
     palette: {
+      backdrop: string
       background: string
       error: {
         contrastText: string

@@ -1,4 +1,5 @@
 import { GlobalStyle } from '../styles/GlobalStyle'
+import { ThemeProvider } from 'styled-components'
 import { addDecorator } from '@storybook/react'
 import { darkTheme } from '../styles/themes/darkTheme'
 import { lightTheme } from '../styles/themes/lightTheme'
@@ -15,4 +16,4 @@ addDecorator((Story) => (
   </>
 ))
 
-addDecorator(withThemesProvider([lightTheme, darkTheme]))
+addDecorator(withThemesProvider([lightTheme, darkTheme], ThemeProvider));

@@ -6,7 +6,9 @@ import { zIndex } from '../constants/zIndex'
 
 export const darkTheme: DefaultTheme = {
   mediaQueries,
+  name: 'Dark',
   palette: {
+    backdrop: 'hsla(0, 0%, 0%, 0.2)',
     background: '#ffffff',
     error: {
       contrastText: '#ffffff',
