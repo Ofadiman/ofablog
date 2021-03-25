@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components'
 
-import ArrowSvg from '../../../public/icons/arrow.svg'
+import { ICONS } from '../../../constants/icons'
 import { Typography } from '../../atoms/Typography/Typography'
 import { HeadingProps } from './PostCard.types'
 
-export const ArrowIcon = styled(ArrowSvg)`
+export const ArrowIcon = styled(ICONS.NavigateNext)`
   ${({ theme }) => css`
     margin-left: 0.8rem;
     path {

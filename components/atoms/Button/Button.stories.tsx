@@ -1,8 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
-import ArrowSvg from '../../../public/icons/arrow.svg'
-import ReactSvg from '../../../public/icons/react.svg'
+import { ICONS } from '../../../constants/icons'
 import { Button } from './Button'
 import { ButtonProps } from './Button.types'
 
@@ -33,9 +32,9 @@ export const WithIcons = Template.bind({})
 WithIcons.args = {
   children: 'click me',
   className: 'clsx',
-  leftIcon: <ReactSvg />,
+  leftIcon: <ICONS.React />,
   onPress: () => {
     console.info('onPress')
   },
-  rightIcon: <ArrowSvg />
+  rightIcon: <ICONS.NavigateNext />
 }

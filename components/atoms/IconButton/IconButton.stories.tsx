@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
-import HamburgerSvg from '../../../public/icons/hamburger.svg'
+import { ICONS } from '../../../constants/icons'
 import { IconButton } from './IconButton'
 import { IconButtonProps } from './IconButton.types'
 
@@ -27,5 +27,5 @@ const Template: Story<IconButtonProps> = (args) => <IconButton {...args} />
 
 export const Main = Template.bind({})
 Main.args = {
-  children: <HamburgerSvg />
+  children: <ICONS.LightMode />
 }

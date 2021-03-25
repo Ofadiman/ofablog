@@ -4,7 +4,7 @@ import { WrapperProps } from './IconButton.types'
 import { getSize } from './IconButton.utils'
 
 export const Wrapper = styled.button<WrapperProps>`
-  ${({ size }) => css`
+  ${({ size, theme }) => css`
     align-items: center;
     background-color: transparent;
     border: none;
@@ -20,8 +20,7 @@ export const Wrapper = styled.button<WrapperProps>`
     width: ${getSize(size)};
 
     svg {
-      max-height: 100%;
-      max-width: 100%;
+      fill: ${theme.palette.typography.main};
     }
   `}
 `
