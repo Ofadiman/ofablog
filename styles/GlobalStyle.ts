@@ -3,7 +3,9 @@ import { createGlobalStyle, css } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   ${({ theme }) => css`
     #__next {
-      height: 100%;
+      display: flex;
+      flex-flow: column;
+      min-height: 100vh;
     }
 
     *,
@@ -21,10 +23,13 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 62.5%;
       font-family: Roboto, sans-serif;
       line-height: 1.5;
+      height: -webkit-fill-available;
     }
 
     body {
       ${theme.typography.body}
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
     }
 
     h1 {

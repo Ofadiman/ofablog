@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name,@typescript-eslint/naming-convention */
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
 
@@ -25,7 +24,7 @@ const Template: Story<HomeProps> = (args) => <Home {...args} />
 
 export const Main = Template.bind({})
 Main.args = {
-  Footer: () => <footer>{'footer'}</footer>,
-  Header: () => <header>{'header'}</header>,
+  Footer: <footer>{'footer'}</footer>,
+  Header: <header>{'header'}</header>,
   children: 'children'
 }

@@ -1,7 +1,7 @@
-import { ReactNode, VFC } from 'react'
+import { ReactNode } from 'react'
 
 export type HomeProps = {
-  Footer: VFC
-  Header: VFC
+  Footer: JSX.Element
+  Header: JSX.Element
   children: ReactNode
 }

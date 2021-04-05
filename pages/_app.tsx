@@ -4,6 +4,7 @@ import React, { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import { Header } from '../components/organisms/Header/Header'
+import { Home } from '../components/templates/Home/Home'
 import { GlobalStyle } from '../styles/GlobalStyle'
 import { lightTheme } from '../styles/themes/lightTheme'
 
@@ -17,10 +18,16 @@ export default function App({ Component: Page, pageProps }: AppProps): ReactNode
       </Head>
       <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
-        <Header />
-        <main style={{ height: 5000 }}>
+        <Home
+          Footer={
+            <footer>
+              <div style={{ backgroundColor: 'red', height: 200 }}>{'Footer content'}</div>
+            </footer>
+          }
+          Header={<Header />}
+        >
           <Page {...pageProps} />
-        </main>
+        </Home>
       </ThemeProvider>
     </>
   )

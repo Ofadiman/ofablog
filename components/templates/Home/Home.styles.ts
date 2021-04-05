@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 
-export const StyledMain = styled.main`
-  flex-grow: 1;
-  position: relative;
-`
-
-export const StyledHome = styled.div`
+export const Main = styled.main`
   display: flex;
-  flex-direction: column;
-  height: 100vh;
+  flex: 1;
+  flex-flow: column;
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 80%;
 `
