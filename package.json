@@ -13,6 +13,7 @@
     "dev": "next dev",
     "eslint-check": "eslint ./**/*.{ts,tsx}",
     "eslint-fix": "eslint ./**/*.{ts,tsx} --fix",
+    "export": "next export",
     "npm-update-minor": "ncu -u --target minor",
     "start": "next start",
     "storybook-build": "build-storybook --output-dir storybook-dist",
