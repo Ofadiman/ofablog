@@ -1,8 +1,6 @@
 import { GetAsValueOptions } from './Typography.types'
 
-// @ts-expect-error
-// eslint-disable-next-line consistent-return
-export const getAsValue = ({ as, variant }: GetAsValueOptions): string | undefined => {
+export const getAsValue = ({ as, variant }: GetAsValueOptions): string => {
   if (as !== undefined) {
     return as
   }
@@ -10,4 +8,6 @@ export const getAsValue = ({ as, variant }: GetAsValueOptions): string | undefin
   if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(variant)) {
     return variant
   }
+
+  return 'p'
 }

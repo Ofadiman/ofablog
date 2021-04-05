@@ -9,16 +9,17 @@
   "description": "Personal blog.",
   "license": "MIT",
   "scripts": {
-    "eslint-check": "eslint {codegen,pages,components}/**/*.{ts,tsx}",
-    "eslint-fix": "eslint {codegen,pages,components}/**/*.{ts,tsx} --fix",
-    "next-build": "next build",
-    "next-dev": "next dev",
-    "next-start": "next start",
+    "build": "next build",
+    "dev": "next dev",
+    "eslint-check": "eslint ./**/*.{ts,tsx}",
+    "eslint-fix": "eslint ./**/*.{ts,tsx} --fix",
     "npm-update-minor": "ncu -u --target minor",
+    "start": "next start",
     "storybook-build": "build-storybook -o storybook",
     "storybook-dev": "start-storybook -p 6006",
     "syncpack-format": "syncpack format",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test-ci": "CI=true jest"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
