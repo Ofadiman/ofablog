@@ -1,4 +1,4 @@
-import { getRandomIntegerInRange } from '@ofadiman/shared'
+import faker from 'faker'
 import { useCallback, useEffect, useRef } from 'react'
 
 import { UseRandomIntervalOptions, UseRandomIntervalReturn } from './useRandomInterval.types'
@@ -18,7 +18,7 @@ export const useRandomInterval = ({
   useEffect(() => {
     if (typeof minDelay === 'number' && typeof maxDelay === 'number') {
       const handleTick = (): void => {
-        const nextTickAt = getRandomIntegerInRange(minDelay, maxDelay)
+        const nextTickAt = faker.datatype.number({ max: maxDelay, min: minDelay, precision: 1 })
         timeoutId.current = window.setTimeout(() => {
           savedCallback.current()
           handleTick()

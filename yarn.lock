@@ -2590,11 +2590,6 @@
     pluralize "^8.0.0"
     ts-node "^9.1.1"
 
-"@ofadiman/shared@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@ofadiman/shared/-/shared-0.1.9.tgz#5cbd9226d23cbf162f6a1f7643a2ffdbea0ee560"
-  integrity sha512-ob6jmGDDlETWzezRPxFJ6FADKD9x8U24GsqPtRvH2Wja5x/dYnalDh54IbQXf+IufmGXsKucf4neI8m6gUg7vg==
-
 "@opentelemetry/api@0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-0.14.0.tgz#4e17d8d2f1da72b19374efa7b6526aa001267cae"
@@ -3613,6 +3608,11 @@
   integrity sha512-1zzPV9FDe1I/WHhRkf9SNgqtRJWZqrBWgu7JGveuHmmyR9CnAPCie2N/x+iHrgnpYBIcCJWHBoMRv2TRWktsvw==
   dependencies:
     chalk "*"
+
+"@types/faker@^5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@types/faker/-/faker-5.5.0.tgz#c1d1d3015559e0f7ca3a7a2e3a2ee31066d5a0f9"
+  integrity sha512-WPBf6jgCsRrbPrgDuWHfbI+cd2CT33JUK+w8NM8jU7KmNr9PF+2eKhD0DKV32nMlyzdMnTHc5TSAG1jpkZbN5A==
 
 "@types/fined@*":
   version "1.1.2"
@@ -8145,6 +8145,11 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+
+faker@^5.5.2:
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/faker/-/faker-5.5.2.tgz#d6f99923fb757b26733a6d2396ddb448ac5bb446"
+  integrity sha512-6G3lzZXWjWfqTJDS9KhHFIislZMGdrzDqews3T14E/dsANVbs3YT4A3jSNDrbA/gbtmjLuKJx9DzcLucdXBqBw==
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"
