@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
       ${theme.typography.body}
       min-height: 100vh;
       min-height: -webkit-fill-available;
+      overflow: hidden;
     }
 
     h1 {

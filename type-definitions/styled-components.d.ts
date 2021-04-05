@@ -76,6 +76,7 @@ declare module 'styled-components' {
       subtitle: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
     }
     zIndex: {
+      backdrop: number
       drawer: number
       modal: number
       snackbar: number
