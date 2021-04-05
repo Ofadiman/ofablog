@@ -62,6 +62,7 @@ declare module 'styled-components' {
       }
     }
     typography: {
+      a: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       body: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       button: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>
       caption: (options: ThemeProps<DefaultTheme>) => FlattenInterpolation<ThemeProps<DefaultTheme>>

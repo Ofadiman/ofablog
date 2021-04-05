@@ -55,5 +55,9 @@ export const GlobalStyle = createGlobalStyle`
     h6 {
       ${theme.typography.h6}
     }
+
+    a {
+      ${theme.typography.a}
+    }
   `}
 `

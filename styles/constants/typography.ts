@@ -1,6 +1,15 @@
 import { css, DefaultTheme, ThemeProps } from 'styled-components'
 
 export const typography: DefaultTheme['typography'] = {
+  a: ({ theme }: ThemeProps<DefaultTheme>) => css`
+    color: ${theme.palette.typography.main};
+    font-size: 1.6rem;
+    text-decoration: none;
+
+    :hover {
+      color: ${theme.palette.primary.main};
+    }
+  `,
   body: ({ theme }: ThemeProps<DefaultTheme>) => css`
     color: ${theme.palette.typography.main};
     font-size: 1.6rem;
