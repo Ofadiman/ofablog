@@ -15,7 +15,7 @@
     "eslint-fix": "eslint ./**/*.{ts,tsx} --fix",
     "npm-update-minor": "ncu -u --target minor",
     "start": "next start",
-    "storybook-build": "build-storybook -o storybook",
+    "storybook-build": "build-storybook --output-dir storybook-dist",
     "storybook-dev": "start-storybook -p 6006",
     "syncpack-format": "syncpack format",
     "test": "jest --watch",

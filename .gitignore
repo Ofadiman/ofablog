@@ -11,8 +11,8 @@
 /out/
 
 # production
-/build
-/storybook
+/next-dist
+/storybook-dist
 
 # misc
 .DS_Store
