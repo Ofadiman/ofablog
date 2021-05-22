@@ -1,25 +1,26 @@
+import { Button } from '@material-ui/core'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
-import { getSortedPostsData } from '../lib/posts'
-import { PostData } from '../lib/types/PostData.type'
+import { Frontmatter } from '../types/Frontmatter.type'
 
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData()
+type Props = { allPosts: (Frontmatter & { id: string; transformedMdx: string })[] }
 
+export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
-      allPostsData
+      allPosts: []
     }
   }
 }
 
-export default function HomePage({ allPostsData }: { allPostsData: PostData[] }): ReactNode {
+export default function HomePage({ allPosts }: Props): ReactNode {
   return (
     <section>
+      <Button>{'button'}</Button>
       <ul>
-        {allPostsData.map(({ id, date, title }) => (
+        {allPosts.map(({ id, date, title }) => (
           <li key={id}>
             <Link href={`/posts/${id}`}>{title}</Link>
             <br />
