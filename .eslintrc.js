@@ -1,4 +1,5 @@
 module.exports = {
+  ignorePatterns: ['next-dist', 'node_modules', '.idea', '.github', '.storybook', '_templates'],
   extends: ['@ofadiman/eslint-config-react'],
   overrides: [
     {

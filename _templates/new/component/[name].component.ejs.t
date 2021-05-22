@@ -1,5 +1,5 @@
 ---
-to: components/<%= h.inflection.pluralize(h.changeCase.lower(type)) %>/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.component.tsx
+to: components/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.component.tsx
 ---
 import clsx from 'clsx'
 import React, { ReactElement } from 'react'

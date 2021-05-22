@@ -1,7 +1,6 @@
 module.exports = {
   stories: ['../**/*.stories.@(tsx)'],
   addons: [
-    'storybook-addon-styled-component-theme/dist/preset',
     '@storybook/addon-links',
     {
       name: '@storybook/addon-essentials',
