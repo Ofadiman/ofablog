@@ -24,4 +24,4 @@ ENV TERM xterm
 ENV NODE_PATH /usr/local/lib/node_modules:/home/${user}/.config/yarn/global/node_modules
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/${user}/.yarn/bin:${project_dir}/node_modules/.bin
 
-WORKDIR /ofablog
+WORKDIR ${project_dir}

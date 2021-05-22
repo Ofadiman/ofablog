@@ -16,7 +16,7 @@ services:
     ports:
       - 3000:3000
     working_dir: /ofablog
-    command: yarn next-dev
+    command: yarn dev
 
   storybook:
     container_name: storybook
