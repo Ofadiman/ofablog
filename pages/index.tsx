@@ -3,14 +3,17 @@ import { GetStaticProps } from 'next'
 import Link from 'next/link'
 import React, { ReactNode } from 'react'
 
-import { Frontmatter } from '../types/Frontmatter.type'
+import { getManyPosts } from '../functions/getManyPosts/getManyPosts'
+import { GetManyPostsResult } from '../functions/getManyPosts/getManyPosts.types'
 
-type Props = { allPosts: (Frontmatter & { id: string; transformedMdx: string })[] }
+type Props = { allPosts: GetManyPostsResult }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  const allPosts = await getManyPosts()
+
   return {
     props: {
-      allPosts: []
+      allPosts
     }
   }
 }
@@ -20,13 +23,11 @@ export default function HomePage({ allPosts }: Props): ReactNode {
     <section>
       <Button>{'button'}</Button>
       <ul>
-        {allPosts.map(({ id, date, title }) => (
-          <li key={id}>
-            <Link href={`/posts/${id}`}>{title}</Link>
+        {allPosts.map(({ frontMatter, slug }) => (
+          <li key={slug}>
+            <Link href={`/posts/${slug}`}>{frontMatter.title}</Link>
             <br />
-            {id}
-            <br />
-            {date}
+            {frontMatter.createdAt}
           </li>
         ))}
       </ul>

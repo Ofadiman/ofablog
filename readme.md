@@ -37,9 +37,16 @@ To publish the application and storybook to [netlify](https://app.netlify.com/) 
 - `hygen new component --name <name> --type <type>` - Generate a React component.
 
   - `<name>` - Any kebab case string.
-  - `<type>` - One of `atom`, `molecule`, `organism` or `template`.
 
 - `hygen new constant --name <name>` - Generate a constant value.
+
+  - `<name>` - Any kebab case string.
+
+- `hygen new decorator --name <name>` - Generate a decorator.
+
+  - `<name>` - Any kebab case string.
+
+- `hygen new dto --name <name>` - Generate a dto.
 
   - `<name>` - Any kebab case string.
 

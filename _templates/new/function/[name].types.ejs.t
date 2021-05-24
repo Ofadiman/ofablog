@@ -1,6 +1,6 @@
 ---
 to: functions/<%= h.changeCase.camel(name) %>/<%= h.changeCase.camel(name) %>.types.ts
 ---
-export type Args = {}
+export type <%= h.changeCase.pascal(name) %>Args = {}
 
-export type Result = {}
+export type <%= h.changeCase.pascal(name) %>Result = {}
