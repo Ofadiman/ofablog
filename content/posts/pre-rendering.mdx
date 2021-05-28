@@ -12,3 +12,21 @@ Talis calceus una amors plasmator est. Peritus victrixs ducunt ad compater. Extu
 Pol, a bene buxum. Heu. Barbatus historia inciviliter consumeres cobaltum est. Nixs sunt solitudos de pius secula. Noster sensorem etiam prensionems adgium est.
 Flavum calcaria etiam attrahendams lapsus est. Cum lixa volare, omnes menses gratia gratis, dexter cliniases.
 Heu, superbus lacta! Pol, emeritis habitio! Placidus lixa aegre apertos orgia est. A falsis, lactea peritus pars. Hercle, musa velox!. Musas tolerare! Festus, rusticus triticums acceleratrix aperto de fidelis, domesticus abaculus.
+
+```tsx
+export const CodeHighlighter = ({ children, language }: CodeHighlighterProps): ReactElement | null => {
+  const classes = useStyles()
+
+  return (
+    <SyntaxHighlighter
+      className={classes.root}
+      language={language}
+      showInlineLineNumbers={true}
+      showLineNumbers={true}
+      style={atomOneDark}
+    >
+      {children}
+    </SyntaxHighlighter>
+  )
+}
+```
