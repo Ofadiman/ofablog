@@ -1,0 +1,10 @@
+---
+to: containers/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.container.tsx
+---
+import { ReactElement } from 'react'
+
+import { <%= h.changeCase.pascal(name) %>ContainerProps } from './<%= h.changeCase.pascal(name) %>.container.types'
+
+export const <%= h.changeCase.pascal(name) %>Container = ({ children }: <%= h.changeCase.pascal(name) %>ContainerProps): ReactElement | null => {
+  return null
+}

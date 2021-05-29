@@ -10,7 +10,7 @@ export const Logo = ({ className, href }: LogoProps): ReactElement | null => {
   const classes = useStyles()
 
   return (
-    <Link className={clsx(classes.root, className)} data-testid={''} href={href}>
+    <Link className={clsx(classes.root, className)} href={href}>
       <Image alt={'Application logo'} height={24} src={'/icons/logo.svg'} width={24} />
     </Link>
   )

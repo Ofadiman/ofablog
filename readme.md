@@ -42,6 +42,10 @@ To publish the application and storybook to [netlify](https://app.netlify.com/) 
 
   - `<name>` - Any kebab case string.
 
+- `hygen new container --name <name>` - Generate a container.
+
+  - `<name>` - Any kebab case string.
+
 - `hygen new decorator --name <name>` - Generate a decorator.
 
   - `<name>` - Any kebab case string.

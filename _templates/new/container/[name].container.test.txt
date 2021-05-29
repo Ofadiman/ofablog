@@ -1,0 +1,10 @@
+---
+to: containers/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.container.test.tsx
+---
+import { <%= h.changeCase.pascal(name) %>Container } from './<%= h.changeCase.pascal(name) %>.container'
+
+describe('<%= h.changeCase.pascal(name) %>Container', () => {
+  test('should be defined', () => {
+    expect(<%= h.changeCase.pascal(name) %>Container).toBeDefined()
+  })
+})
