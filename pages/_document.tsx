@@ -7,8 +7,6 @@ import { DocumentContext, DocumentInitialProps } from 'next/dist/next-server/lib
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import * as React from 'react'
 
-import { theme } from '../styles/theme'
-
 const getCache = (): ReturnType<typeof createCache> => {
   const cache = createCache({ key: 'css', prepend: true })
   cache.compat = true
@@ -55,7 +53,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang={'en'}>
         <Head>
-          <meta content={theme.palette.primary.main} name={'theme-color'} />
           <link
             href={'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'}
             rel={'stylesheet'}

@@ -1,0 +1,8 @@
+---
+to: containers/<%= h.changeCase.pascal(name) %>/<%= h.changeCase.pascal(name) %>.container.types.ts
+---
+import { ReactNode } from 'react'
+
+export type <%= h.changeCase.pascal(name) %>ContainerProps = {
+  children: ReactNode
+}

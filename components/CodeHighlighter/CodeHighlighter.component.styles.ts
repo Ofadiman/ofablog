@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     display: 'block'
   },
   root: {
-    borderRadius: 8,
+    borderRadius: theme.spacing(2),
     ...theme.typography.body1
   }
 }))

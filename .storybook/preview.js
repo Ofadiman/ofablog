@@ -1,7 +1,7 @@
 import * as Image from 'next/image'
 import { ThemeProvider } from '@material-ui/core'
 import { addDecorator } from '@storybook/react'
-import { theme } from '../styles/theme'
+import { LIGHT_THEME } from '../styles/themes'
 
 Object.defineProperty(Image, 'default', {
   configurable: true,
@@ -15,7 +15,7 @@ export const parameters = {
 }
 
 addDecorator((Story) => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={LIGHT_THEME}>
     <Story />
   </ThemeProvider>
 ))
