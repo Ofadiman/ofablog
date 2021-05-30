@@ -14,3 +14,6 @@ logs-blog:
 
 logs-storybook:
 	@docker-compose logs --follow --timestamps storybook
+
+clean-branches:
+	@./scripts/delete-merged-branches.sh

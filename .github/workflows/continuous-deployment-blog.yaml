@@ -38,13 +38,10 @@ jobs:
       - name: Build blog
         run: yarn build
 
-      - name: Export next
-        run: yarn export
-
       - name: Publish blog to Netlify
         uses: netlify/actions/cli@master
         with:
-          args: deploy --dir=out --prod
+          args: deploy --dir=next-dist --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_BLOG_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
