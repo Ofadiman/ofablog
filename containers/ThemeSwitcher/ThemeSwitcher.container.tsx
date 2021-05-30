@@ -1,10 +1,10 @@
-import { useDarkMode } from 'next-dark-mode'
 import { ReactElement } from 'react'
+import useDarkMode from 'use-dark-mode'
 
 import { ThemeSwitcher } from '../../components/ThemeSwitcher/ThemeSwitcher.component'
 
 export const ThemeSwitcherContainer = (): ReactElement | null => {
-  const { darkModeActive: isDarkModeOn, switchToLightMode, switchToDarkMode } = useDarkMode()
+  const { value: isDarkModeActive, toggle } = useDarkMode()
 
-  return <ThemeSwitcher isDarkModeOn={isDarkModeOn} onMoonClick={switchToDarkMode} onSunClick={switchToLightMode} />
+  return <ThemeSwitcher isDarkModeOn={isDarkModeActive} onMoonClick={toggle} onSunClick={toggle} />
 }
