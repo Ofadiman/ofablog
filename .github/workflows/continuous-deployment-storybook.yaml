@@ -3,13 +3,13 @@ name: Continuous deployment - storybook
 on:
   push:
     branches:
-      - main
+      - obsolete
 
 env:
   NODE_VERSION: 14.16.0
 
 jobs:
-  continuous_integration:
+  continuous_deployment:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout project
